@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo"></div>
+    <div class="container">
+      <h2>Student information</h2>
+      <form>
+        <div class="form-group">
+          <label for="masv">Student Code:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentCode"
+            placeholder="enter student code"
+            name="studentCode"
+          />
+        </div>
+        <div class="form-group">
+          <label for="hoten">Full name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="enter name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="studentId">Student ID:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentId"
+            placeholder=" enter student ID"
+            name="studentId"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="enter phone number"
+            name="phone"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="enter Email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="math">Math:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="math"
+            placeholder="enter math grade"
+            name="math"
+          />
+        </div>
+        <div class="form-group">
+          <label for="physic">Physic:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="physic"
+            placeholder=" enter physic grade "
+            name="physic"
+          />
+        </div>
+        <div class="form-group">
+          <label for="chemistry">Chemistry:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="chemistry"
+            placeholder="enter chemistry grade"
+            name="chemistry"
+          />
+        </div>
+        <button type="button" class="btn btn-success" onclick="addStudent()">
+          Add student
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="saveEditedInfo()"
+        >
+          Save Edited Infor
+        </button>
+      </form>
+      <div style="float: right">
+        <button class="btn btn-success" onclick="SetStorage()">
+          Save storage
+        </button>
+        <button class="btn btn-primary" onclick="GetStorage()">
+          Get storage
+        </button>
+        <button class="btn btn-danger" onclick="DeleteStudent()">
+          Delete Student
+        </button>
+      </div>
+    </div>
+    <!--table bootstrap 4 -->
+    <div class="clearfix"></div>
+    <br />
+    <div class="container">
+      <div class="right">
+        <div class="input-group">
+          <input
+            type="text"
+            id="keyword"
+            onkeyup="searchStudent()"
+            onchange="searchStudent()"
+            class="form-control"
+            placeholder="Enter name of student ..."
+          />
+          <span class="input-group-btn">
+            <button
+              class="btn btn-secondary"
+              onclick="searchStudent()"
+              type="button"
+            >
+              Search
+            </button>
+          </span>
+        </div>
+        <br />
+        <div class="alert alert-success" id="Inform"></div>
+      </div>
+      <h2>Student List</h2>
+      <p></p>
+      <table id="studentTable" class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Student Code</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Student ID</th>
+            <th>Phone number</th>
+            <th>GPA</th>
+            <th>Evaluation</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyStudent">
+          <tr>
+            <td></td>
+            <td>value 1</td>
+            <td>value 2</td>
+            <td>value 3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="Student.js"></script>
+    <script type="text/javascript" src="StudentList.js"></script>
+    <script type="text/javascript" src="Validation.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
